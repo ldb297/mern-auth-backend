@@ -96,6 +96,16 @@ const login = async (req,res) => {
     }
 }
 
+//profile 
+const profile = (req,res) => {
+    console.log(`>>>>>>>>>> in profile`)
+    console.log(req.body)
+    console.log(`^ Body && v User`)
+    console.log(req.user)
+    const { id, name, email } = req
+    res.json({ id, name, email })
+}
+
 //exports 
 
-module.exports = { test, register, login }
+module.exports = { test, register, login, profile }
